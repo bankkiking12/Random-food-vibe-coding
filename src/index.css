@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+* { font-family: 'Noto Serif Thai', serif; }
+.font-display { font-family: 'Playfair Display', serif; }
+
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 20px rgba(234,179,8,0.2); }
+  50% { box-shadow: 0 0 40px rgba(234,179,8,0.5); }
+}
+@keyframes shake {
+  0%,100% { transform: translateX(0); }
+  20% { transform: translateX(-6px); }
+  40% { transform: translateX(6px); }
+  60% { transform: translateX(-4px); }
+  80% { transform: translateX(4px); }
+}
+@keyframes pop-in {
+  0% { transform: scale(0.8); opacity: 0; }
+  70% { transform: scale(1.05); }
+  100% { transform: scale(1); opacity: 1; }
+}
+@keyframes float-up {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(-60px); opacity: 0; }
+}
+
+.glow-active { animation: glow-pulse 1.5s ease-in-out infinite; }
+.shake { animation: shake 0.4s ease-in-out; }
+.pop-in { animation: pop-in 0.4s ease-out forwards; }
+.particle { animation: float-up 1s ease-out forwards; }
