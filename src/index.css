@@ -28,3 +28,47 @@
 .shake { animation: shake 0.4s ease-in-out; }
 .pop-in { animation: pop-in 0.4s ease-out forwards; }
 .particle { animation: float-up 1s ease-out forwards; }
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+.font-display {
+  font-family: 'Playfair Display', serif;
+}
+
+.glow-active {
+  box-shadow: 0 0 30px rgba(234,179,8,.35);
+}
+
+.pop-in {
+  animation: pop .35s ease;
+}
+
+@keyframes pop {
+  0% { transform: scale(.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.shake {
+  animation: shake .35s ease;
+}
+
+@keyframes shake {
+  0%,100% { transform: translateX(0); }
+  25% { transform: translateX(-3px); }
+  75% { transform: translateX(3px); }
+}
+
+.particle {
+  animation: fly 1s ease-out forwards;
+}
+
+@keyframes fly {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-120px) scale(0);
+    opacity: 0;
+  }
+}
